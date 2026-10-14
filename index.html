@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Dyes Chem Limited (GDCL)</title>
+    <!-- Google Fonts -->
+    <!-- Google Font: Anton বা Teko (ব্যানারের মতো বোল্ড ফন্টের জন্য) -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Teko:wght@600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- External Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Browser Tab Favicon -->
+    <link rel="icon" type="image/png" href="assets/GDCL LOGO.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- আসল লোগো সহ ব্র্যান্ডিং -->
+            <!-- লোগো সরাসরি সাইজ কন্ট্রোলসহ -->
+            <!-- প্রটেক্টেড লোগো -->
+            <a href="#home" class="logo">
+                <img src="assets/GDCL LOGO.png" alt="GDCL Logo" class="protected-img" 
+                     style="height: 75px; width: auto; max-width: 160px; object-fit: contain; display: block;" 
+                     oncontextmenu="return false;" draggable="false" 
+                     onerror="this.src='https://via.placeholder.com/120x40?text=GDCL+Logo'">
+            </a>
+
+           <!-- Main Navigation Links (Employee List যুক্ত করা হয়েছে) -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#directors">Director's</a>
+                <a href="employees.html">Employee List</a>
+                <a href="index.html#products">Products</a>
+                <a href="index.html#calculator">Dosage Calculator</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="index.html#about">About GDCL</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <span class="badge">Total Textile & Chemical Solutions</span>
+            <h2>Global Dyes Chem Limited</h2>
+            <p>Trusted importer and supplier of Reactive Dyes, Disperse Dyes, Textile Auxiliaries, and Industrial Chemicals across Bangladesh.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-accent">Explore Products</a>
+                <a href="#directors" class="btn btn-outline">Meet Our Directors</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="stats-strip">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>150+</h3>
+                <p>Dye & Chemical Products</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>ZDHC & OEKO-TEX Compliant</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Lab & Technical Support</p>
+            </div>
+            <div class="stat-item">
+                <h3>Fast</h3>
+                <p>Nationwide Bulk Delivery</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board of Directors Section -->
+    <section id="directors" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Leadership & Vision</span>
+                <h2 class="section-title">Board of Directors</h2>
+                <p class="section-desc">Meet our leadership team and explore their academic and technical backgrounds driving GDCL forward.</p>
+            </div>
+
+            <!-- Directors Grid (Loaded via script.js) -->
+            <div id="directors-container" class="grid-3"></div>
+        </div>
+    </section>
+
+    <!-- Employee List Section -->
+    <section id="employees" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Team</span>
+                <h2 class="section-title">Employee List</h2>
+                <p class="section-desc">Meet the dedicated professionals and technical staff driving GDCL's daily operations.</p>
+            </div>
+            <!-- এখানে ডিরেক্টরদের মতো জাভাস্ক্রিপ্ট দিয়ে বা সরাসরি এমপ্লয়ীদের তালিকা লোড করা যাবে -->
+            <div id="employees-container" class="grid-3">
+                <!-- এমপ্লয়ী কার্ডগুলো এখানে রেন্ডার হবে -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Catalog</span>
+                <h2 class="section-title">Dyes & Industrial Chemicals</h2>
+                <p class="section-desc">High-performance colorants and auxiliaries tailored for textile wet processing mills.</p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="filter-bar">
+                <button class="filter-btn active" onclick="filterProducts('All', this)">All Products</button>
+                <button class="filter-btn" onclick="filterProducts('Reactive Dyes', this)">Reactive Dyes</button>
+                <button class="filter-btn" onclick="filterProducts('Disperse Dyes', this)">Disperse Dyes</button>
+                <button class="filter-btn" onclick="filterProducts('Auxiliaries', this)">Auxiliaries</button>
+            </div>
+
+            <!-- Products Grid (Loaded via script.js) -->
+            <div id="products-container" class="grid-3"></div>
+        </div>
+    </section>
+
+    <!-- Dye Dosage Calculator Section -->
+    <section id="calculator" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Technical Tool</span>
+                <h2 class="section-title">Dye & Chemical Dosage Calculator</h2>
+                <p class="section-desc">Quickly calculate required liquor volume, dye weight, and salt/alkali dosage for your batch.</p>
+            </div>
+
+            <div class="calculator-card">
+                <div class="calc-inputs">
+                    <div class="form-group">
+                        <label>Fabric Weight (kg)</label>
+                        <input type="number" id="fabricWeight" value="500" oninput="calculateDosage()">
+                    </div>
+                    <div class="form-group">
+                        <label>Liquor Ratio (1 : X)</label>
+                        <input type="number" id="liquorRatio" value="8" oninput="calculateDosage()">
+                    </div>
+                    <div class="form-group">
+                        <label>Dye Shade (% owf)</label>
+                        <input type="number" id="dyeShade" value="2.5" step="0.1" oninput="calculateDosage()">
+                    </div>
+                    <div class="form-group">
+                        <label>Salt / Chemical (g/L)</label>
+                        <input type="number" id="saltDosage" value="60" oninput="calculateDosage()">
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-box">
+                        <span>Total Liquor Volume</span>
+                        <h4 id="resWater">4,000 Liters</h4>
+                    </div>
+                    <div class="result-box">
+                        <span>Required Dye Weight</span>
+                        <h4 id="resDye">12.50 kg</h4>
+                    </div>
+                    <div class="result-box">
+                        <span>Required Salt / Chemical</span>
+                        <h4 id="resSalt">240.00 kg</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About GDCL Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Who We Are</span>
+                <h2 class="section-title">About Global Dyes Chem Limited</h2>
+                <p class="section-desc">
+                    Global Dyes Chem Limited (GDCL) is a premier chemical and dyestuff supplier in Bangladesh, dedicated to serving the textile wet processing, dyeing, washing, and allied manufacturing industries with world-class eco-compliant products and reliable supply chain solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get in Touch with GDCL</h2>
+                    <p>Request a lab sample, bulk quotation, or technical data sheet (TDS/MSDS) directly from our team.</p>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@gdcl-bd.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +880 1XXX-XXXXXX</li>
+                    </ul>
+                </div>
+
+                <form class="contact-form" id="inquiryForm">
+                    <div class="form-group">
+                        <label>Your Name / Company Name</label>
+                        <input type="text" id="clientName" placeholder="Enter your name or mill name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone / WhatsApp Number</label>
+                        <input type="tel" id="clientPhone" placeholder="+8801..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Product / Inquiry Details</label>
+                        <textarea id="clientMessage" rows="4" placeholder="Specify product name or sample requirement..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Global Dyes Chem Limited (GDCL). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External JS File -->
+    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

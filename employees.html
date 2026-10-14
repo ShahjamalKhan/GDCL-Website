@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List - Global Dyes Chem Limited (GDCL)</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- External Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Browser Tab Favicon -->
+    <link rel="icon" type="image/png" href="assets/GDCL LOGO.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- আসল লোগো সহ ব্র্যান্ডিং -->
+            <!-- লোগো সরাসরি সাইজ কন্ট্রোলসহ -->
+            <!-- প্রটেক্টেড লোগো -->
+            <a href="#home" class="logo">
+                <img src="assets/GDCL LOGO.png" alt="GDCL Logo" class="protected-img" 
+                     style="height: 75px; width: auto; max-width: 160px; object-fit: contain; display: block;" 
+                     oncontextmenu="return false;" draggable="false" 
+                     onerror="this.src='https://via.placeholder.com/120x40?text=GDCL+Logo'">
+            </a>
+
+            <!-- Navigation Links (হোম পেজের বিভিন্ন সেকশনের সঠিক পাথসহ) -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#directors">Director's</a>
+                <a href="employees.html">Employee List</a>
+                <a href="index.html#products">Products</a>
+                <a href="index.html#calculator">Dosage Calculator</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="index.html#about">About GDCL</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Employee Section -->
+    <section class="section" style="padding-top: 140px;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Professional Workforce</span>
+                <h2 class="section-title">GDCL Employee List</h2>
+                <p class="section-desc">Meet the dedicated team members managing technical operations, laboratory, supply chain, and administration.</p>
+            </div>
+
+            <!-- Employee Grid (Loaded via script.js) -->
+            <div id="full-employees-container" class="grid-3">
+                <!-- Dynamically loaded employee cards will appear here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Global Dyes Chem Limited (GDCL). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External JS File -->
+    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
